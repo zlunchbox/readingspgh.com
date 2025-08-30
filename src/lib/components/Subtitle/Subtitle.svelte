@@ -9,6 +9,9 @@
     "I like you just the way you are.",
     "For everyone!",
     "A bunch of fun, and a bundle too.",
+    "I think this is the start of a beautiful friendship.",
+    "What do you think?",
+    "I've got an idea!",
   ];
   const subtitle: string =
     subtitles[Math.floor(Math.random() * subtitles.length)];

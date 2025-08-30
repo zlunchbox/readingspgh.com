@@ -10,8 +10,20 @@
 </svelte:head>
 
 <div class="flex flex-col items-center justify-center h-screen">
-  <div class="w-full flex-4 flex">
+  <div class="w-full flex-4 flex flex-col items-center justify-center gap-10">
     {@render children?.()}
   </div>
-  <div class="w-full flex-1 flex items-center justify-center">test</div>
+  <nav class="w-1/3 flex-1 flex items-center justify-center text-xl">
+    <div class="flex-1 text-center">
+      <a class="hover:font-bold" href="/">home</a>
+    </div>
+    <p class="flex-0 select-none cursor-default text-center">&bull;</p>
+    <div class="flex-1 text-center">
+      <a class="hover:font-bold" href="/about">about</a>
+    </div>
+    <p class="flex-0 select-none cursor-default text-center">&bull;</p>
+    <div class="flex-1 text-center">
+      <a class="hover:font-bold" href="/pastreadings">past readings</a>
+    </div>
+  </nav>
 </div>
