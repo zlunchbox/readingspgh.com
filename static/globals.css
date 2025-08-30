@@ -1,0 +1,14 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("./Commissioner_VF_1.001.ttf") format("truetype");
+  font-weight: 100 900; /* Weight range for variable font */
+  font-style: normal;
+  font-display: swap; /* Improves loading performance */
+}
