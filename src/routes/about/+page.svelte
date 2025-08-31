@@ -13,13 +13,13 @@
     Reading, it is not an open mic.
   </p>
   <p class="p-4">The program goes like this:</p>
-  <ul class="p-2 list-disc list-inside">
-    <li class="py-1">
+  <ul class="px-6 py-2 list-disc list-inside">
+    <li class="py-2">
       The opening party, when people arrive, mingle, meet, munch, talk, and
       laugh.
     </li>
-    <li class="py-1">The reading, when the magic happens.</li>
-    <li class="py-1">
+    <li class="py-2">The reading, when the magic happens.</li>
+    <li class="py-2">
       The closing party, when people inspire, excite, share, connect, and know
       each other better.
     </li>
