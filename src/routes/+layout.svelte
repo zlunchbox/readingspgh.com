@@ -13,7 +13,9 @@
   <div class="w-full flex-4 flex flex-col items-center justify-center gap-10">
     {@render children?.()}
   </div>
-  <nav class="w-1/2 flex-1 flex items-center justify-center text-xl">
+  <nav
+    class="w-1/2 font-[Archivo] flex-1 flex items-center justify-center text-xl"
+  >
     <div class="flex-1 text-center">
       <a class="hover:font-bold" href="/">home</a>
     </div>
@@ -22,9 +24,6 @@
     </div>
     <div class="flex-1 text-center">
       <a class="hover:font-bold" href="/nextreading">next reading</a>
-    </div>
-    <div class="flex-1 text-center">
-      <a class="hover:font-bold" href="/pastreadings">past readings</a>
     </div>
   </nav>
 </div>

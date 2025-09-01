@@ -1,4 +1,8 @@
-<div class="font-[Commissioner] text-xl w-1/2">
+<script lang="ts">
+  import Squares from "$lib/components/DynamicShape/Squares.svelte";
+</script>
+
+<div class="font-[Archivo] text-xl w-1/2 z-10">
   <p class="p-4">
     The Readings are a biannual literary reading series—the Spring and Fall
     Reading.
@@ -26,3 +30,4 @@
   </ul>
   <p class="p-4">We hope to see you soon.</p>
 </div>
+<Squares />

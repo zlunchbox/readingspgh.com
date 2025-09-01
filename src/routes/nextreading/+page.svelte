@@ -1,4 +1,8 @@
-<div class="font-[Commissioner] text-xl w-1/2">
+<script lang="ts">
+  import Triangles from "$lib/components/DynamicShape/Triangles.svelte";
+</script>
+
+<div class="font-[Archivo] text-xl w-1/2">
   <h2 class="p-4 text-2xl font-bold">date</h2>
   <p class="px-6 py-2">Friday, September 19th, 2025</p>
   <h2 class="p-4 text-2xl font-bold">place</h2>
@@ -15,5 +19,6 @@
     </ul>
     <li class="py-1">closing party, 9p to late</li>
   </ul>
-  <p class="p-4">We hope to see you there.</p>
+  <p class="p-4">See you there.</p>
 </div>
+<Triangles />
