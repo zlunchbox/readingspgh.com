@@ -30,4 +30,3 @@
   </ul>
   <p class="p-4">We hope to see you soon.</p>
 </div>
-<Squares />
