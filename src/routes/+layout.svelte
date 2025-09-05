@@ -14,7 +14,7 @@
     {@render children?.()}
   </div>
   <nav
-    class="w-1/2 font-[Archivo] flex-1 flex items-center justify-center text-xl"
+    class="w-1/2 font-[Archivo] flex-1 flex flex-col lg:flex-row items-center justify-center text-xl"
   >
     <div class="flex-1 text-center">
       <a class="hover:font-bold" href="/">home</a>
