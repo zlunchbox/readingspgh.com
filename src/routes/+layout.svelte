@@ -9,21 +9,29 @@
   <link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="flex flex-col items-center justify-center min-h-full">
-  <div class="w-full flex-4 flex flex-col items-center justify-center gap-10">
+<div
+  class="min-h-full font-[Archivo] flex flex-col items-center justify-center"
+>
+  <div class="w-full flex-3 flex flex-col items-center justify-center gap-10">
     {@render children?.()}
   </div>
   <nav
-    class="w-full md:w-1/2 font-[Archivo] flex-1 flex flex-row items-center justify-center text-xl"
+    class="w-full font-[Archivo] flex-1 flex gap-6 flex-row items-center justify-center p-5 text-base md:text-xl"
   >
-    <div class="flex-1 text-center">
-      <a class="hover:font-bold" href="/">home</a>
+    <div
+      class="p-2 flex-1 text-center border border-gray-200 transition hover:bg-gray-200 hover:text-gray-500"
+    >
+      <a href="/">home</a>
     </div>
-    <div class="flex-1 text-center">
-      <a class="hover:font-bold" href="/about">about</a>
+    <div
+      class="p-2 flex-1 text-center border border-gray-200 transition hover:bg-gray-200 hover:text-gray-500"
+    >
+      <a href="/about">about</a>
     </div>
-    <div class="flex-1 text-center">
-      <a class="hover:font-bold" href="/nextreading">next reading</a>
+    <div
+      class="p-2 flex-1 text-center border border-gray-200 transition hover:bg-gray-200 hover:text-gray-500"
+    >
+      <a href="/nextreading">next reading</a>
     </div>
   </nav>
 </div>
