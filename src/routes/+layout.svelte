@@ -16,22 +16,25 @@
     {@render children?.()}
   </div>
   <nav
-    class="w-full font-[Archivo] flex-1 flex gap-6 flex-row items-center justify-center p-5 text-base md:text-xl"
+    class="w-full font-[Archivo] flex-0 flex gap-6 flex-row items-center justify-center p-5 text-base md:text-xl"
   >
-    <div
-      class="p-2 flex-1 text-center border border-gray-200 transition hover:bg-gray-200 hover:text-gray-500"
+    <a
+      class="block p-2 flex-1 flex items-center justify-center self-stretch border border-gray-200 transition hover:bg-gray-200 hover:text-gray-500"
+      href="/"
     >
-      <a href="/">home</a>
-    </div>
-    <div
-      class="p-2 flex-1 text-center border border-gray-200 transition hover:bg-gray-200 hover:text-gray-500"
+      home
+    </a>
+    <a
+      class="block p-2 flex-1 flex items-center justify-center self-stretch border border-gray-200 transition hover:bg-gray-200 hover:text-gray-500"
+      href="/about"
     >
-      <a href="/about">about</a>
-    </div>
-    <div
-      class="p-2 flex-1 text-center border border-gray-200 transition hover:bg-gray-200 hover:text-gray-500"
+      about
+    </a>
+    <a
+      class="block p-2 flex-1 flex items-center justify-center text-center self-stretch border border-gray-200 transition hover:bg-gray-200 hover:text-gray-500"
+      href="/nextreading"
     >
-      <a href="/nextreading">next reading</a>
-    </div>
+      next reading
+    </a>
   </nav>
 </div>
