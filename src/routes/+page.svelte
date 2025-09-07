@@ -9,7 +9,7 @@
 <h2 class="text-sm lg:text-xl text-center flex-0">
   The Third Fall Reading
   <a
-    class="block text-center text-base lg:text-2xl hover:font-bold"
+    class="block text-center text-base lg:text-2xl transition hover:text-gray-500"
     href="/nextreading"
   >
     Friday, September 19th, 2025
