@@ -16,9 +16,9 @@
     <span class="block text-base">8p to 9p</span>
   </p>
   <ul class="px-12 py-1 list-disc list-inside">
-    <li class="">Noushin</li>
-    <li class="">Tamar</li>
-    <li class="">Alexa</li>
+    <li class="text-lg">Noushin</li>
+    <li class="text-lg">Tamar</li>
+    <li class="text-lg">Alexa</li>
   </ul>
   <p class="px-8 pt-1">
     closing party
