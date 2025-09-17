@@ -18,7 +18,6 @@
   <ul class="px-12 py-1 list-disc list-inside">
     <li class="">Noushin</li>
     <li class="">Tamar</li>
-    <li class="">Tai</li>
     <li class="">Alexa</li>
   </ul>
   <p class="px-8 pt-1">
