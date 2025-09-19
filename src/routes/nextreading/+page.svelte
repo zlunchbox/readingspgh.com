@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="font-[Archivo] text-xl">
+<div class="text-xl">
   <h2 class="p-4 text-2xl font-bold">time</h2>
   <p class="px-8">Friday, September 19th, 2025</p>
   <h2 class="p-4 text-2xl font-bold">place</h2>
@@ -16,7 +16,11 @@
     <span class="block text-base">8p to 9p</span>
   </p>
   <ul class="px-12 py-1 list-disc list-inside">
-    <li class="text-lg">Noushin</li>
+    <li class="text-lg">
+      <a class="transition hover:text-gray-500" href="/readers/noushin">
+        Noushin Quazi
+      </a>
+    </li>
     <li class="text-lg">Tamar</li>
     <li class="text-lg">Alexa</li>
   </ul>
