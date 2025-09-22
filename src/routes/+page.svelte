@@ -7,8 +7,3 @@
   The Readings
 </h1>
 <Subtitle class="text-xl lg:text-2xl text-center flex-0" />
-<BannerInfo
-  bannerTitle="The Third Fall Reading"
-  bannerSubtitle="Friday, September 19th, 2025"
-  bannerLink="/nextreading"
-/>
