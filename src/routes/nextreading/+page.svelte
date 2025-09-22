@@ -21,8 +21,16 @@
         Noushin Quazi
       </a>
     </li>
-    <li class="text-lg">Tamar</li>
-    <li class="text-lg">Alexa</li>
+    <li class="text-lg">
+      <a class="transition hover:text-gray-500" href="/readers/tamar">
+        Tamar Tipton
+      </a>
+    </li>
+    <li class="text-lg">
+      <a class="transition hover:text-gray-500" href="/readers/alexa">
+        Alexa Bocek
+      </a>
+    </li>
   </ul>
   <p class="px-8 pt-1">
     closing party
