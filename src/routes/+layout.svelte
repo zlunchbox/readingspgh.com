@@ -17,22 +17,22 @@
     {@render children?.()}
   </div>
   <nav
-    class="w-full font-[Archivo] flex-0 flex gap-6 flex-row items-center justify-center p-5 text-base md:text-xl"
+    class="h-full absolute top-90 left-0 ml-6 mt-6 flex flex-col font-[Archivo] text-base md:text-xl"
   >
     <a
-      class="block p-2 flex-1 flex items-center justify-center self-stretch border border-gray-200 transition hover:bg-gray-200 hover:text-gray-500"
+      class="block p-2 flex-0 flex self-stretch transition-[color] text-black hover:text-gray-500"
       href="/"
     >
       home
     </a>
     <a
-      class="block p-2 flex-1 flex items-center justify-center self-stretch border border-gray-200 transition hover:bg-gray-200 hover:text-gray-500"
+      class="block p-2 flex-0 flex self-stretch transition-[color] text-black hover:text-gray-500"
       href="/about"
     >
       about
     </a>
     <a
-      class="block p-2 flex-1 flex items-center justify-center text-center self-stretch border border-gray-200 transition hover:bg-gray-200 hover:text-gray-500"
+      class="block p-2 flex-0 flex self-stretch transition-[color] text-black hover:text-gray-500"
       href="/nextreading"
     >
       next reading
