@@ -7,3 +7,12 @@
     scroll-behavior: smooth;
   }
 }
+
+@theme {
+  --color-paper: #f4f1ea;
+  --color-cloth: #b5402a;
+}
+
+body {
+  background-color: var(--color-paper);
+}

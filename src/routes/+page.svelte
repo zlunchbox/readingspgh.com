@@ -1,4 +1,5 @@
 <script lang="ts">
+  import CircleFigure from "$lib/components/Figure/CircleFigure.svelte";
   import Section from "$lib/components/Section/Section.svelte";
   import SectionNav from "$lib/components/SectionNav/SectionNav.svelte";
   import Subtitle from "$lib/components/Subtitle/Subtitle.svelte";
@@ -10,9 +11,28 @@
   ];
 </script>
 
-<Section id="home" class="gap-10">
-  <h1 class="font-semibold text-center text-5xl lg:text-8xl">The Readings</h1>
-  <Subtitle class="text-xl lg:text-2xl text-center" />
+<Section id="home" class="overflow-hidden">
+  <CircleFigure />
+  <!-- Portrait: text at the top, figure below. Landscape: text left, figure right. -->
+  <div class="relative w-full max-w-6xl portrait:mb-auto">
+    <!-- w-fit keeps the rule to the title's width, clear of the figure -->
+    <div class="w-fit">
+      <p
+        class="flex justify-between border-b border-black pb-3 text-xs uppercase tracking-[0.2em]"
+      >
+        <span>No. 1</span>
+        <span>Pittsburgh</span>
+      </p>
+      <h1
+        class="mt-8 font-semibold text-6xl xl:text-8xl leading-[0.95] tracking-tight"
+      >
+        The Readings
+      </h1>
+      <!-- contain: the subtitle wraps at the title's width instead of widening the column.
+           On phones the title wraps and fills the width, so cap it near the width of "Readings". -->
+      <Subtitle class="mt-6 text-xl lg:text-2xl [contain:inline-size] max-sm:max-w-[13em] text-balance" />
+    </div>
+  </div>
 </Section>
 
 <Section id="about">
