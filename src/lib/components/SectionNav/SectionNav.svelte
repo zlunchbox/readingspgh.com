@@ -31,7 +31,7 @@
   });
 
   const arrowClass =
-    "size-11 flex items-center justify-center border border-gray-200 bg-white/80 backdrop-blur-sm transition hover:bg-gray-200 hover:text-gray-500";
+    "size-11 flex items-center justify-center border border-gray-200 bg-white/80 backdrop-blur-sm transition hover:bg-gray-200";
 </script>
 
 <!-- Phones: a passive position indicator in the left gutter, so text stays centered
