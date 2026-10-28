@@ -1,0 +1,19 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "readingspgh",
+	"compatibility_date": "2026-10-28",
+	// Served only on the custom domains below
+	"workers_dev": false,
+	// Assets-only Worker: no script, just the prerendered site from `bun run build`
+	"assets": {
+		"directory": "./build",
+		"not_found_handling": "404-page"
+	},
+	// Cloudflare creates the DNS records and certificates for these. www is
+	// redirected to the apex by a Redirect Rule on the zone (dashboard → Rules →
+	// Redirect Rules), which runs before requests reach the Worker.
+	"routes": [
+		{ "pattern": "readingspgh.com", "custom_domain": true },
+		{ "pattern": "www.readingspgh.com", "custom_domain": true }
+	]
+}

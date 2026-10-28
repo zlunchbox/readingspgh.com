@@ -1,0 +1,4 @@
+# Old pages, now sections of the home page. Cloudflare applies these before
+# serving assets; `bun run preview` serves them locally too.
+/about /#about 308
+/nextreading /#next-reading 308
