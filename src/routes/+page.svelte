@@ -90,22 +90,53 @@
     title="Next reading"
     shape="triangle"
     side="right"
-    caption="fig. 3 — an occasion"
+    caption="fig. 3 — a moment"
     fill="bg-ink"
     inline
   >
+    <p class="font-semibold text-5xl xl:text-6xl leading-[0.95] tracking-tight">
+      Fourth Fall Reading
+    </p>
+    <!-- After the display heading, not before: on narrow phones a word that size can't
+         fit beside the slope and would be pushed below the whole triangle -->
     <InsetFigure
       shape="triangle"
       side="right"
-      caption="fig. 3 — an occasion"
+      caption="fig. 3 — a moment"
       fill="bg-ink"
     />
-    <p class="font-semibold text-5xl xl:text-6xl leading-[0.95] tracking-tight">
-      Stay tuned.
-    </p>
-    <p class="mt-6 text-xl lg:text-2xl">
-      Third Spring Reading announcements coming in 2026.
-    </p>
+    <!-- Plain blocks rather than rules or grid rows, so the lines can follow
+         the triangle's slope (rules and grid rows would run under or square
+         off around it) -->
+    <dl class="mt-8 space-y-6 text-xl">
+      <div>
+        <dt class="text-xs uppercase tracking-[0.2em]">When</dt>
+        <dd class="mt-2">Friday, November&nbsp;20, 2026</dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-[0.2em]">Where</dt>
+        <dd class="mt-2">20 Love Pl.,<br />Pittsburgh, Pennsylvania</dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-[0.2em]">Program</dt>
+        <dd class="mt-2">
+          <ol class="pl-8 list-[lower-roman] space-y-3">
+            <li>
+              The opening party
+              <span class="block text-base">7p to 8p</span>
+            </li>
+            <li>
+              The reading
+              <span class="block text-base">8p to 9p</span>
+            </li>
+            <li>
+              The closing party
+              <span class="block text-base">9p to late</span>
+            </li>
+          </ol>
+        </dd>
+      </div>
+    </dl>
   </Plate>
 </Section>
 
