@@ -7,17 +7,34 @@
   shelf. In landscape the figure is pinned to its side, vertically centred,
   and the header and body sit beside it.
 
-  Renders straight into a Section with `overflow-hidden portrait:justify-start`;
-  portrait placement assumes the Section's 4rem top padding.
+  With `inline`, the portrait figure is left to the body (an InsetFigure the
+  text wraps around), and the header is a plain catalogue row in both
+  orientations.
+
+  Renders straight into an `overflow-hidden` Section. The portrait opener also
+  needs `portrait:justify-start` and assumes the Section's 4rem top padding.
 -->
 <script lang="ts">
   import type { PlateProps } from "./Plate";
 
-  const { number, title, shape, side, caption, fill, children }: PlateProps =
-    $props();
+  const {
+    number,
+    title,
+    shape,
+    side,
+    caption,
+    fill,
+    inline = false,
+    children,
+  }: PlateProps = $props();
 </script>
 
-<div class="figure {side} {shape} pointer-events-none" aria-hidden="true">
+<div
+  class="figure {side} {shape} pointer-events-none {inline
+    ? 'portrait:hidden'
+    : ''}"
+  aria-hidden="true"
+>
   <div class="shape absolute {fill}"></div>
   <div class="centre absolute size-3">
     <span class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-paper"></span>
@@ -28,13 +45,18 @@
 
 <!-- Wherever the fixed arrows show, keep the text clear of them: the whole column in
      landscape, only the body in portrait so the header still reaches a right-hand figure -->
-<div class="column {side} relative w-full md:landscape:pr-16">
+<div
+  class="column {side} relative w-full md:landscape:pr-16"
+  class:opener={!inline}
+>
   <div class="landscape:max-w-[45rem]">
     <div class="header text-xs uppercase tracking-[0.2em]">
       <span>No. {number}</span>
       <h2>{title}</h2>
     </div>
-    <div class="mt-12 landscape:mt-8 md:portrait:pr-16">
+    <div
+      class="md:portrait:pr-16 {inline ? 'mt-8' : 'mt-12 landscape:mt-8'}"
+    >
       {@render children()}
     </div>
   </div>
@@ -131,33 +153,31 @@
     }
   }
 
-  /* Portrait: stacked beside the figure, as tall as it, so the rule is level
-     with the figure's bottom edge. The column starts 1.5rem in from the screen
-     edge, so a margin of --vis leaves the same 1.5rem gutter beside the figure. */
   .header {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 0.5rem;
-    min-height: var(--s);
+    justify-content: space-between;
     padding-bottom: 0.75rem;
     border-bottom: 1px solid black;
   }
 
-  .left .header {
-    margin-left: var(--vis);
-  }
+  /* Portrait opener: stacked beside the figure, as tall as it, so the rule is
+     level with the figure's bottom edge. The column starts 1.5rem in from the
+     screen edge, so a margin of --vis leaves the same 1.5rem gutter beside the
+     figure. */
+  @media (orientation: portrait) {
+    .opener .header {
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      min-height: var(--s);
+    }
 
-  .right .header {
-    margin-right: var(--vis);
-  }
+    .opener.left .header {
+      margin-left: var(--vis);
+    }
 
-  @media (orientation: landscape) {
-    .column .header {
-      flex-direction: row;
-      justify-content: space-between;
-      min-height: 0;
-      margin: 0;
+    .opener.right .header {
+      margin-right: var(--vis);
     }
   }
 </style>

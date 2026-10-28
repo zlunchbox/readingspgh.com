@@ -1,5 +1,6 @@
 <script lang="ts">
   import CircleFigure from "$lib/components/Figure/CircleFigure.svelte";
+  import InsetFigure from "$lib/components/Figure/InsetFigure.svelte";
   import Plate from "$lib/components/Plate/Plate.svelte";
   import Section from "$lib/components/Section/Section.svelte";
   import SectionNav from "$lib/components/SectionNav/SectionNav.svelte";
@@ -44,12 +45,19 @@
     side="left"
     caption="fig. 2 — a room"
     fill="bg-catalog"
+    inline
   >
     <div class="text-xl space-y-6">
       <p>
         The Readings are a biannual literary reading series—the Spring and
         Fall Reading.
       </p>
+      <InsetFigure
+        shape="square"
+        side="left"
+        caption="fig. 2 — a room"
+        fill="bg-catalog"
+      />
       <p>
         Each Reading presents three to five writers, their work, and a space
         for everyone to commune on art, culture, and life.
@@ -76,7 +84,7 @@
   </Plate>
 </Section>
 
-<Section id="next-reading" class="overflow-hidden portrait:justify-start">
+<Section id="next-reading" class="overflow-hidden">
   <Plate
     number={3}
     title="Next reading"
@@ -84,11 +92,18 @@
     side="right"
     caption="fig. 3 — an occasion"
     fill="bg-ink"
+    inline
   >
+    <InsetFigure
+      shape="triangle"
+      side="right"
+      caption="fig. 3 — an occasion"
+      fill="bg-ink"
+    />
     <p class="font-semibold text-5xl xl:text-6xl leading-[0.95] tracking-tight">
       Stay tuned.
     </p>
-    <p class="mt-6 text-xl lg:text-2xl text-balance">
+    <p class="mt-6 text-xl lg:text-2xl">
       Third Spring Reading announcements coming in 2026.
     </p>
   </Plate>

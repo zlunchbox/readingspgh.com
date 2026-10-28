@@ -9,5 +9,7 @@ export type PlateProps = {
   caption: string;
   /** Background class for the figure, e.g. "bg-catalog" */
   fill: string;
+  /** Portrait figure sits in the body as an InsetFigure instead of opening the section */
+  inline?: boolean;
   children: Snippet;
 };
