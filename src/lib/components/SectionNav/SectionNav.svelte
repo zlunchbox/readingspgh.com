@@ -34,16 +34,17 @@
     "size-11 flex items-center justify-center border border-gray-200 bg-white/80 backdrop-blur-sm transition hover:bg-gray-200 hover:text-gray-500";
 </script>
 
-<!-- Phones: a passive position indicator that fits in the page gutter, so text stays centered -->
+<!-- Phones: a passive position indicator in the left gutter, so text stays centered
+     and it stays clear of the native scrollbar on the right -->
 <div
-  class="md:hidden fixed right-2 top-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-2"
+  class="md:hidden fixed left-2 top-4 z-20 flex flex-col gap-1.5"
   aria-hidden="true"
 >
   {#each sections as section, i (section.id)}
     <span
-      class="w-1.5 rounded-full transition-all duration-300 {i === current
-        ? 'h-5 bg-black'
-        : 'h-1.5 bg-gray-300'}"
+      class="size-1.5 transition-colors duration-300 {i === current
+        ? 'bg-black'
+        : 'bg-gray-300'}"
     ></span>
   {/each}
 </div>
