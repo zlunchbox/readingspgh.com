@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { BannerInfo } from "./BannerInfo";
-  const { bannerTitle, bannerSubtitle, bannerLink }: BannerInfo = $props();
+  import type { BannerInfoProps } from "./BannerInfo";
+  const { bannerTitle, bannerSubtitle, bannerLink }: BannerInfoProps = $props();
 </script>
 
 <h2 class="text-sm lg:text-xl text-center flex-0">
