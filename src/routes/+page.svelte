@@ -1,6 +1,6 @@
 <script lang="ts">
   import CircleFigure from "$lib/components/Figure/CircleFigure.svelte";
-  import SquareFigure from "$lib/components/Figure/SquareFigure.svelte";
+  import Plate from "$lib/components/Plate/Plate.svelte";
   import Section from "$lib/components/Section/Section.svelte";
   import SectionNav from "$lib/components/SectionNav/SectionNav.svelte";
   import Subtitle from "$lib/components/Subtitle/Subtitle.svelte";
@@ -36,18 +36,17 @@
   </div>
 </Section>
 
-<Section id="about" class="overflow-hidden">
-  <!-- Landscape: clear the square's visible 65% (0.65 × 58svh ≈ 38svh) plus a gap.
-       Wherever the fixed arrows show, keep the text clear of them. -->
-  <div class="relative w-full landscape:pl-[calc(38svh+3rem)] md:pr-16">
-    <div class="max-w-prose text-xl space-y-6">
-      <div
-        class="flex justify-between border-b border-black pb-3 text-xs uppercase tracking-[0.2em]"
-      >
-        <span>No. 2</span>
-        <h2>About</h2>
-      </div>
-      <p class="pt-2">
+<Section id="about" class="overflow-hidden portrait:justify-start">
+  <Plate
+    number={2}
+    title="About"
+    shape="square"
+    side="left"
+    caption="fig. 2 — a room"
+    fill="bg-catalog"
+  >
+    <div class="text-xl space-y-6">
+      <p>
         The Readings are a biannual literary reading series—the Spring and
         Fall Reading.
       </p>
@@ -74,16 +73,25 @@
       </ol>
       <p>We hope to see you soon.</p>
     </div>
-  </div>
-  <!-- After the text so it closes the section on phones; landscape pins it left regardless -->
-  <SquareFigure />
+  </Plate>
 </Section>
 
-<Section id="next-reading">
-  <div class="text-xl text-center">
-    <h2 class="p-4 text-2xl font-bold">stay tuned</h2>
-    <p class="p-4">Third Spring Reading announcements coming in 2026</p>
-  </div>
+<Section id="next-reading" class="overflow-hidden portrait:justify-start">
+  <Plate
+    number={3}
+    title="Next reading"
+    shape="triangle"
+    side="right"
+    caption="fig. 3 — an occasion"
+    fill="bg-ink"
+  >
+    <p class="font-semibold text-5xl xl:text-6xl leading-[0.95] tracking-tight">
+      Stay tuned.
+    </p>
+    <p class="mt-6 text-xl lg:text-2xl text-balance">
+      Third Spring Reading announcements coming in 2026.
+    </p>
+  </Plate>
 </Section>
 
 <SectionNav {sections} />
